@@ -32,9 +32,7 @@
     "morgan": "^1.10.0",
     "pg": "^8.3.2",
     "supertest": "^4.0.2",
+    "postgrator-cli": "^3.2.0",
     "xss": "^1.0.8"
-  },
-  "devDependencies": {
-    "postgrator-cli": "^3.2.0"
   }
 }
