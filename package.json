@@ -1,10 +1,12 @@
 {
-  "name": "express-boilerplate",
+  "name": "blogful-api",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha --require test/setup.js",
+    "migrate": "postgrator --config postgrator-config.js",
+    "migrate:test": "env NODE_ENV=test npm run migrate",
     "start": "node src/server.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master",
@@ -18,10 +20,19 @@
     "expect": true
   },
   "dependencies": {
+    "chai": "^4.2.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "helmet": "^4.1.0",
-    "morgan": "^1.10.0"
+    "knex": "^0.21.5",
+    "mocha": "^8.1.2",
+    "morgan": "^1.10.0",
+    "pg": "^8.3.2",
+    "supertest": "^4.0.2",
+    "xss": "^1.0.8"
+  },
+  "devDependencies": {
+    "postgrator-cli": "^3.2.0"
   }
 }
